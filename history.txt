@@ -1,0 +1,43 @@
+ 1  ls
+    2  cd documents
+    3  cd ..
+    4  cd documents
+    5  -al
+    6  ls -al
+    7  mkdir belen
+    8  cd belen
+    9  ls
+   10  touch test.txt
+   11  touch readme.md
+   12  ls
+   13  rm test.txt
+   14  ls
+   15  start readme.md
+   16  git config --global user.name
+   17  git config --global user.name "belen123456789"
+   18  git config --global user.name
+   19  git config --global user.email "belencorine234@gmail.com"
+   20  git config --global user.email
+   21  git init
+   22  ls -al
+   23  git status
+   24  git add
+   25  git add .
+   26  git status
+   27  git commit -m "hi"
+   28  git branch -M main
+   29  git remote add origin https://github.com/belen123456789/belen.git
+   30  git push -u origin main
+   31  git push -u origin main
+   32  start readme.md
+   33  git add .
+   34  git status
+   35  git commit -m "second commit"
+   36  git push
+   37  ls
+   38  cd ..
+   39  git clone https://github.com/belen123456789/belen.git
+   40  git clone https://github.com/belen123456789/belen.git
+   41   cd belen
+   42  touch history.txt
+   43  history
