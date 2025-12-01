@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+       .bg-red {
+    background-color: #2c0b2f; /* dark violet background */
+    padding: 10px;
+}
+
+.fc-white {
+    color: #f4e9f4; /* soft lavender white text */
+}
+
+form {
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(143, 77, 135, 0.6), rgba(186, 121, 175, 0.6));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #f4e9f4;
+    backdrop-filter: blur(6px);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    background-color: #3a143d; /* plum background */
+    padding: 20px;
+}
+
+#top {
+    background: linear-gradient(135deg, #7b2f8a, #b66fa6); /* violet-magenta gradient */
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    background-color: #4a1f4f; /* dark purple */
+    color: #f4e9f4;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid #b66fa6;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.font-10 {
+    font-size: 10px;
+    color: #d8b8d8; /* soft pastel text */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #7b2f8a, #b66fa6);
+    color: #fff;
+    font-size: 13px;
+    border-top: 2px solid #d8b8d8;
+}
+
+        
+    </style>
+</head>
+<body>
+    <header id="top">
+      <ul>
+                 <li><a href="portfolio.html">Home</a></li>
+        </ul>
+    </header>
+
+    <section class="bg-red fc-white">
+    <form action="" method="">
+        <h1>LOGIN FORM</h1>
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" id="username" maxlength="20"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" name="password" id="password" maxlength="20">
+        <br><br>
+        <input type="button" name="login" id="login" value="Submit" onclick="validate()">
+        <!--<button name="login" id="login">Submit</button>-->
+    </form>
+</section>
+
+    <section class="bg-red fc-white">
+        <form action="">
+            <h1>Registration</h1>
+            <label for="">Fullname:</label><br>
+            <input type="text" name="fullname" id="fullname" placeholder="Fullname"><br>
+            <label for="">E-mail</label><br>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <br><br>
+            <label for="">Gender</label><br>
+            <input type="radio" name="gender" id="gender" value="male" checked>Male
+            <input type="radio" name="gender" id="gender" value="female">Female
+            <br><br>
+            <label for="">Music Services</label><br>
+            <input type="checkbox" name="service" id="service" value="Spotify" checked> Spotify
+            <input type="checkbox" name="service" id="service" value="Apple" checked> Apple
+            <input type="checkbox" name="service" id="service" value="Itunes" checked> Itunes
+            <br><br>
+            <label for="">Genre</label><br>
+            <select name="Genre" id="Genre">
+                <option value="">--Select Genre--</option>
+                <option value="Kpop">Kpop</option>
+                <option value="Rock">Rock</option>
+                <option value="Jazz">Jazz</option>
+            </select>
+            <br><br>
+            <input type="button" name="Registration" id="Registration" value="Submit" onclick="registration()">
+        </form>
+    </section>
+
+    <section class="bg-red fc-white">
+        <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.1017929419054!2d120.9936545736194!3d14.478843880049006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce7b78ac639b%3A0x66fdf9991e1d765c!2sOlivarez%20College%20Para%C3%B1aque!5e0!3m2!1sen!2sph!4v1757328850075!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section>
+         <video src="video/" auto play muted poster=""></video>
+    </section>
+
+    <section>
+         <audio src="audio/" controls withdh="50%"></audio>
+    </section>
+</body>
+<footer>
+    <a href="#top">Go to top</a><br>
+    &copy; 2025 Corine Belen
+</footer>
+</html>
+
+<script>
+    function validate(){
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+
+        if(username.value === 'ting'&& password.value === '123'){
+        alert("Welcome! \n Username: " + username.value + " \n Password: " + password.value);
+        window.location.href='home.html';
+    } else {
+        alert("Invalid username and password! Please try again");
+        }
+    }
+        function registration(){
+            var fullname = document.getElementById("fullname");
+            var email = document.getElementById("email");
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var service = document.querySelectorAll('input[type="checkbox"]:checked');
+            var genre = document.querySelector('select[name="Genre"]');
+            const checkedValues = Array.from(service).map(checkbox => checkbox.value);
+            const joinValues = checkedValues.join(", ");
+
+            alert("Information: \n Fullname: " + fullname.value + "\n Email: " +   email.value + "\n Gender: " + gender.value + "\n Service: " + joinValues + "\n Genre: " + genre.value);
+        }   
+</script>

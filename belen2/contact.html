@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e5e4d3c4; 
+        }
+        header {
+            height: 50px;
+            background-color: rgb(102, 117, 123);
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            background-color: rgb(0, 3, 3);
+        }
+        ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        form {
+            width: 400px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 40px;
+            background-color: #9de0a9d4;
+            color: white;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="button"] {
+            width: 50%;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        input[type="button"]:hover {
+            background-color: lightgray;
+        }
+        .success {
+            margin-top: 10px;
+            color: #9de0a9d4;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            color: black;
+            margin-top: 20px;
+        }
+        footer a {
+            color: blue;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="top">
+      <ul>
+                 <li><a href="index2.html">Home</a></li>
+    </header>
+
+    <section>
+        <form id="contactForm" onsubmit="return validate()">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" placeholder="email" required>
+
+            <label for="mobile">Mobile</label>
+            <input type="text" name="mobile" id="mobile" placeholder="mobile" pattern="09[0-9]{9}" title="Please enter a valid Philippine mobile number starting with 09" required/>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="button" value="Submit" onclick="validate()">
+            <p id="successMessage" class="success" style="display:none;">Submitted Successfully!</p>
+        </form>
+    </section>
+
+    <div>
+     <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.223450119609!2d121.12695251083841!3d14.586339477366561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c77e600d0e53%3A0x158a8103e01209c6!2s15%20Valley%20View%20Ave%2C%20Cainta%2C%201900%20Rizal!5e0!3m2!1sen!2sph!4v1757901768196!5m2!1sen!2sph" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+    </div>
+    <footer>
+        <a href="#top">Go to top</a><br>
+        &copy; 2025 Corine Belen
+    </footer>
+
+    <script>
+        function validate(){
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if(name && email && mobile && message){
+                document.getElementById("successMessage").style.display =
+                document.getElementById("contactForm").reset();
+            } 
+                alert( " Form Details:\n\n" + "Name: " + name + "\n" +"Email: " + email + "\n" +"Mobile: " + mobile + "\n" +
+                      "Message: " + message);
+
+    }
+    </script>
+</body>
+</html>

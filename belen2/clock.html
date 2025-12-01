@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clock</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/clock.css">
+
+</head>
+<body>
+  <div class="wrap">
+    
+    <div class="clock-card">
+
+      
+      <div class="analog" id="analog">
+        <div class="tick" id="ticks"></div>
+
+        <div class="hand hour" id="hour-hand"></div>
+        <div class="hand minute" id="minute-hand"></div>
+        <div class="hand second" id="second-hand"></div>
+        <div class="center-dot"></div>
+      </div>
+
+      
+      <div class="digital">
+
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="time" id="digital-time">00:00:00</div>
+          <div class="ampm" id="ampm">AM</div>
+        </div>
+
+        <div class="date" id="date">Loading date...</div>
+
+        
+        <div class="controls">
+          <button class="btn active" id="format-btn">12-hour</button>
+          <button class="btn" id="toggle-sec">Hide seconds</button>
+          <button class="btn" id="theme-btn">Toggle Theme</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="clock.js"></script>
+</body>
+</html>

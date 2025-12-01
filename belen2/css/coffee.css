@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body { background: #fafafa; }
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    background: #a8c77b;
+    padding: 10px 18px;
+    border-radius: 50px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+}
+
+/* BUTTON */
+.btn {
+    padding: 12px 30px;
+    background: #a9c87f;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover { background: #8eb36d; }
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    padding: 60px 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.hero-text span { color: #000; }
+
+.hero-img img {
+    width: 380px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+.arabica, .fresh {
+    display: flex;
+    padding: 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text-box {
+    background: #a8c77b;
+    padding: 50px;
+    border-radius: 25px;
+    width: 45%;
+}
+
+.text-box h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.arabica-img, .fresh-img {
+    width: 45%;
+    border-radius: 20px;
+}
+
+/* OBJECTIVE */
+.objective {
+    display: flex;
+    align-items: center;
+    background: #e6dccf;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.objective-box {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+/* MENU */
+.menu {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    margin: 20px;
+    background: #dbeac8;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.menu-card img { width: 100%; }
+
+/* MILO */
+.milo {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    background: #a8c77b;
+    border-radius: 25px;
+    flex-wrap: wrap;
+}
+
+.milo-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 40%;
+}
+
+/* FRAPPE SLIDER */
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 250px;
+}
+
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: .3; }
+    to { opacity: 1; }
+}
+
+/* CHRISTMAS */
+.christmas {
+    padding: 70px;
+    background: #1f402d;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    background: red;
+    padding: 15px 25px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+    display: flex;
+    padding: 50px;
+    background: #c9dba4;
+    flex-wrap: wrap;
+}
+
+.contact-form, .thankyou-box {
+    width: 45%;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #a9c87f;
+    color: white;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-text, .hero-img, .text-box, .arabica-img, .fresh-img {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 { font-size: 45px; }
+
+    header nav { display: none; }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 { font-size: 32px; }
+    .text-box h2 { font-size: 28px;

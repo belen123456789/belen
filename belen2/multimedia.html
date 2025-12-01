@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Page</title>
+  <link rel="stylesheet" href="css/style2.css">
+  <style>
+   body {
+  font-family: "Poppins", sans-serif;
+  background-color: #2b0b26;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+header {
+  padding: 20px;
+  background: linear-gradient(135deg, #a24a70, #6b2548);
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+section {
+  padding: 30px;
+}
+
+
+.media {
+  margin: 20px auto;
+  max-width: 700px;
+  background: linear-gradient(145deg, #a24a70, #6b2548);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(255, 79, 122, 0.3);
+}
+
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+img, video, audio {
+  margin-top: 15px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  background: linear-gradient(135deg, #6b2548, #a24a70);
+  font-size: 14px;
+  color: #fff;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+}
+
+
+a, button {
+  background-color: #1c1c1c;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+a:hover, button:hover {
+  background-color: #ff4c68;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(255, 79, 122, 0.4);
+}
+
+  </style>
+</head>
+<body>
+ <ul>
+        <li><a href="portfolio.html">Home</a></li>
+    </ul>
+
+   <header id="top"></header>
+  <h2>MULTIMEDIA PAGE</h2>
+
+  <section class="media">
+    <h2>VIDEO</h2>
+    <video controls id="videoPlayer">
+        <source src="img/Justin Bieber - DAISIES (Music Video).mp4">
+    </video>
+  </section>
+
+  <section class="media">
+    <h2>Audio</h2>
+    <audio controls style="width: 500px;">
+    <source src="img/sombr - back to friends (official video).mp3" type="audio/mpeg">
+    </audio>
+    </audio>
+  </section>
+
+
+  <footer>
+    <a href="top">Go to top</a><br>
+    &copy; 2025 Corine Belen 
+  </footer>
+
+</body>
+</html>

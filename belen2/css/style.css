@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.root{
+    --bg:   rgb(35, 74, 25);
+    --tc: rgb(160, 133, 92);
+    --bgbox: #F0F0F0;
+    --addcolor: rgb(239, 36, 36);
+    --text: 'courier new', monospace;
+    --title: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #9061d7;
+}
+h1, h2, p{
+    color: var(--tc);
+}
+.note{
+    color: var(--addcolor);
+    font-size: 12px;
+    font-style: italic;
+    text-align: left;
+    text-shadow: 3px 3px 3px rgb(150, 150, 150);
+}
+.font-50{
+    font-size: 24px;
+}
+p.note{
+    color: rgb(37, 14, 14);
+    font-size: 18px;
+    font-family: "Acme", sans-serif;
+    text-shadow: 3px 3px 3px rgb(150, 150, 150);
+}
+#intro{
+    background-color: #CBF1F5;
+    padding: 30px;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    border-radius:20px;
+}
+.welcome{
+    font-size: 40px;
+    font-family: "Acme", sans-serif;
+    text-transform: uppercase;
+    line-height: 3em;
+    text-shadow: 3px 3px 3px rgb(150, 150, 150);
+}
+h1.welcome::first-letter{
+    font-size: 100px;
+}
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+li>a:link{
+    color:darkgreen;
+}
+li>a:visited{
+    color: var(--tc);
+}
+li a:hover{
+    padding: 10px;
+    background-color:rgb(17, 126, 126);
+    color:antiquewhite;
+    text-shadow: 2px 3px 2px rgb(150, 150, 150);
+    border-radius: 10px;
+}
+nav ul li{
+    list-style: none;
+}
+.intro.active{
+    background-color: rgb(212, 143, 120);
+}
+sectionn{
+    padding: 20px
+}
+@media screen and(min-width; 720px) {
+    .profile
+}

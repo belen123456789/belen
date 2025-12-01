@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+*
+body {
+    background-color: #2b0b2c; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #f3e6f7; 
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(135deg,  #a24a70, #6b2548); /* violet-magenta gradient */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #f7e9f7;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(182, 111, 166, 0.8);
+}
+
+/* 🔹 MAIN CONTENT BOX */
+.center.box {
+    background: linear-gradient(135deg, #a24a70, #6b2548);
+    margin: 60px auto;
+    padding: 50px;
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(182, 111, 166, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.center.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(182, 111, 166, 0.6);
+}
+
+/* 🔹 TEXT STYLES */
+.welcome {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffbff9;
+    text-shadow: 2px 2px 8px rgba(255, 186, 253, 0.6);
+    margin-bottom: 25px;
+}
+
+.note {
+    font-size: 20px;
+    font-style: italic;
+    color: #f5d6fa;
+    text-shadow: 1px 1px 5px rgba(166, 91, 161, 0.6);
+}
+
+.font-50 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f7d3fa;
+    text-shadow: 1px 1px 6px #a24a70, #6b2548;
+}
+
+/* 🔹 FOOTER (optional) */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: linear-gradient(135deg, #a24a70, #6b2548);
+    color: white;
+    font-size: 14px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}

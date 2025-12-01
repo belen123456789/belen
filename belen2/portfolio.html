@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corine P. Belen | Portfolio</title>
+  <link rel="stylesheet" href="css/index3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ 
+  <header>
+    <h2 class="logo">PORTFOLIO</h2>
+    <nav>
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m <span>CORINE P. BELEN</span></h1>
+      <h3>Student of Information Technology</h3>
+      <p class="highlight">Aspiring Web Developer</p>
+      <p>
+        Passionate aspiring Web Developer focused on building responsive,
+        modern, and user-centered websites while continuously growing my
+        coding and design skills.
+      </p>
+    </div>
+
+    <div class="hero-img">
+      <img src="img/bln.jpg" alt="Corine Belen">
+    </div>
+  </section>
+
+
+  <section id="gallery" class="gallery">
+    <h2>GALLERY</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="img/A.jpg" alt="Gallery 1">
+      </div>
+      <div class="gallery-item">
+        <img src="img/B.jpg" alt="Gallery 2">
+      </div>
+      <div class="gallery-item">
+        <img src="img/E.jpg" alt="Gallery 3">
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="skills" class="skills">
+    <h2>SKILLS & TECHNOLOGIES</h2>
+    <div class="skills-container">
+      <div class="skills-box">
+        <h3>Front-End Development</h3>
+        <ul>
+          <li><img src="img/html.jpg" alt=""> HTML</li>
+          <li><img src="img/css.jpg" alt=""> CSS</li>
+          <li><img src="img/js.jpg" alt=""> JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skills-box">
+        <h3>Back-End Development</h3>
+        <ul>
+          <li><img src="img/node.jpg" alt=""> Node.js</li>
+          <li><img src="img/php.jpg" alt=""> PHP</li>
+          <li><img src="img/python.jpg" alt=""> Python</li>
+          <li><img src="img/sql.jpg" alt=""> MySQL</li>
+        </ul>
+      </div>
+
+      <div class="skills-box">
+        <h3>Tools</h3>
+        <ul>
+          <li><img src="img/github.jpg" alt=""> GitHub</li>
+          <li><img src="img/vsc.jpg" alt=""> VS Code</li>
+          <li><img src="img/figma.jpg" alt=""> Figma</li>
+          <li><img src="img/adobe.jpg" alt=""> Adobe</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>PROJECTS</h2>
+    <div class="project-container">
+
+      <div class="card">
+        <h3>Gallery</h3>
+        <a href="gallery.html" target="_blank" class="btn">View My Gallery</a>
+      </div>
+
+      <div class="card">
+        <h3>Schedule</h3>
+        <a href="schedule.html" target="_blank" class="btn">View My Schedule</a>
+      </div>
+
+      <div class="card">
+        <h3>Resume</h3>
+        <a href="resume.html" target="_blank" class="btn">View My Resume</a>
+      </div>
+
+      <div class="card">
+        <h3>Form</h3>
+        <a href="form.html" target="_blank" class="btn">View My Form</a>
+      </div>
+
+      <div class="card">
+        <h3>Multimedia</h3>
+        <a href="multimedia.html" target="_blank" class="btn">View My Multimedia</a>
+      </div>
+
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+
+   
+    <div id="output" class="output-box" style="display:none;"></div>
+
+    <div class="contact-container">
+      
+      <div class="contact-info">
+        <h3><i>Let’s build something great!</i></h3>
+        <p>
+          I’m always open to new ideas, collaborations, or projects.
+          Whether you have a vision to bring to life or just want to connect,
+          let’s turn your ideas into something amazing — together!
+        </p>
+
+        <div class="contact-details">
+          <p>📧 CPB@gmail.com</p>
+          <p>📞 +63987654321</p>
+          <p>📍 Philippines, Davao Or. Mati City</p>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><img src="img/fb.webp" alt="Facebook"></a>
+          <a href="#"><img src="img/ig.jpg" alt="Instagram"></a>
+          <a href="#"><img src="img/gt.jpg" alt="GitHub"></a>
+        </div>
+      </div>
+<div id="displayMessage"></div>
+
+      
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="subject" placeholder="Subject">
+        <textarea id="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <p>© 2025 Corine Belen | IT Student</p>
+  </footer>
+
+  
+  <script>
+    const sections = document.querySelectorAll('section, .footer');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+  <script>
+  const form = document.querySelector(".contact-form");
+  const displayBox = document.getElementById("displayMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = form.querySelector("input[placeholder='Name']").value;
+    const email = form.querySelector("input[placeholder='Email']").value;
+    const subject = form.querySelector("input[placeholder='Subject']").value;
+    const message = form.querySelector("textarea").value;
+
+    displayBox.innerHTML = `
+      <p style="font-size: 1.2rem;"><strong>Message Sent!</strong></p>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong> ${message}</p>
+    `;
+
+    displayBox.style.display = "block";
+
+   
+    setTimeout(() => {
+      displayBox.style.opacity = "0";
+      displayBox.style.transition = "opacity 1s ease";
+      setTimeout(() => {
+        displayBox.style.display = "none";
+        displayBox.style.opacity = "1"; 
+      }, 1000);
+    }, 5000);
+
+    form.reset();
+  });
+</script>
+
+
+</body>
+</html>
